@@ -1,0 +1,14 @@
+.Board{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border: 1px solid black;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(10, 50px); /* 10 columnas */
+    grid-template-rows: repeat(10, 50px);    /* 10 filas */
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+}
