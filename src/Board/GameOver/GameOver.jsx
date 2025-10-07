@@ -1,11 +1,11 @@
 import "./GameOver.css"
-function GameOver({score}) {
+function GameOver({score,onClick}) {
     return (
-    <div className={`game_over ${verGameOver}`} >
+    <div className="game_over" >
         <h2>Game Over</h2>
         <h2>Felicidades tu puntuacion fue de {score}</h2>
         <h3>Quiere Jugar de Nuevo</h3>
-        <button >Jugar de nuevo</button>
+        <button onClick={onClick}>Jugar de nuevo</button>
     </div> 
   );
 }

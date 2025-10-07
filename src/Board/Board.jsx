@@ -10,6 +10,14 @@ const Board=()=>{
     const [direccion,setDireccion]=useState("right");
     //estados para verificar si el jugador perdio
     const [gameOver,setGameOver]=useState(false);
+    //handler para reinciar el juego
+    const handleRiniciar=()=>{
+        setBody([[0,0]]);
+        manzanaPosition([[1,1]]);
+        setPuntuacion(0);
+        setGameOver(false);
+        setDireccion("right");
+    }
     //funcion para verificar si el usuario salio o colisiono con su cuerpo
     const colision = (newBody) => {
         const [x, y] = newBody[0];
@@ -47,6 +55,7 @@ const Board=()=>{
     }
     //teclados 
     useEffect(() => {
+        if(gameOver) return;
         const handleKeyDown = (e) => {
         if (e.key === "ArrowRight" && direccion !== "left") setDireccion("right");
         if (e.key === "ArrowLeft" && direccion !== "right") setDireccion("left");
@@ -56,7 +65,7 @@ const Board=()=>{
 
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [direccion]);
+    }, [direccion,gameOver]);
     console.log(body)
   // Movimiento constante en la dirección actual
     useEffect(() => {
@@ -78,14 +87,14 @@ const Board=()=>{
             comerManzana(manzana,newBody)
             return newBody;
         });
-        }, 150); 
+        }, 100); 
 
         return () => clearInterval(intervalo);
     }, [direccion, manzana]);
    
     return(
-        <div className={style.game}>
-            {gameOver && <GameOver score={puntuacion}></GameOver>}
+        <div className="game">
+            {gameOver && <GameOver score={puntuacion} onClick={handleRiniciar}></GameOver>}
             <div>
                 <h1>Snake Game</h1>
                 <h2>Score :{puntuacion}</h2>
