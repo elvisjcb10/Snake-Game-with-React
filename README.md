@@ -1,16 +1,33 @@
-# React + Vite
+# Snake Game with React 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Classic Snake Game reimagined with React — fast, fun, and retro-style!**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Descripción
 
-## React Compiler
+Este proyecto es una versión sencilla del clásico juego de la serpiente, construida con **React** y **Vite**. Ideal para aprender sobre animaciones, lógica de juego, manejo de estado y componentes en React.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+##  Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Puedes ver una demo en vivo acá:  
+[snake-game-with-react.vercel.app](https://snake-game-with-react-three.vercel.app) :contentReference[oaicite:0]{index=0}
+
+---
+
+## Tecnologías usadas
+
+- React  
+- Vite  
+- CSS (o tu librería de estilos preferida)  
+- JavaScript moderno (ES6+)  
+
+---
+
+
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/elvisjcb10/Snake-Game-with-React.git
