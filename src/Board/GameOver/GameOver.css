@@ -1,0 +1,7 @@
+.game_over{
+    display: none;
+}
+.mostrar{
+    display: flex;
+    position: relative;
+}
