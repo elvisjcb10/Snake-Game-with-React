@@ -15,7 +15,6 @@ const Board=()=>{
         const [x, y] = newBody[0];
         // Choca con los bordes
         if (x < 0 || x > 9 || y < 0 || y > 9) return true;
-
         // Choca con su propio cuerpo
         for (let i = 1; i < newBody.length; i++) {
         if (newBody[i][0] === x && newBody[i][1] === y) return true;
@@ -86,7 +85,7 @@ const Board=()=>{
    
     return(
         <div className={style.game}>
-            {gameOver && <GameOver score={puntuacion}  gameOver={gameOver} ></GameOver>}
+            {gameOver && <GameOver score={puntuacion}></GameOver>}
             <div>
                 <h1>Snake Game</h1>
                 <h2>Score :{puntuacion}</h2>
