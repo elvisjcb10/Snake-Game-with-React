@@ -7,13 +7,18 @@
 .container{
     width: 100%;
     display: grid;
+    gap: 4px;
     grid-template-columns: repeat(10, 50px); /* 10 columnas */
     grid-template-rows: repeat(10, 50px);    /* 10 filas */
-    gap: 4px;
     align-items: center;
     justify-content: center;
 }
 .game{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.text{
     display: flex;
     flex-direction: column;
     gap: 10px;

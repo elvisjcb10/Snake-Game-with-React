@@ -25,7 +25,7 @@ const Board=()=>{
         if (x < 0 || x > 9 || y < 0 || y > 9) return true;
         // Choca con su propio cuerpo
         for (let i = 1; i < newBody.length; i++) {
-        if (newBody[i][0] === x && newBody[i][1] === y) return true;
+            if (newBody[i][0] === x && newBody[i][1] === y) return true;
         }
         return false;
     };
@@ -66,7 +66,6 @@ const Board=()=>{
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, [direccion,gameOver]);
-    console.log(body)
   // Movimiento constante en la dirección actual
     useEffect(() => {
         const intervalo = setInterval(() => {
@@ -93,11 +92,11 @@ const Board=()=>{
     }, [direccion, manzana]);
    
     return(
-        <div className="game">
+        <div className={style.game}>
             {gameOver && <GameOver score={puntuacion} onClick={handleRiniciar}></GameOver>}
-            <div>
+            <div className={style.text}>
                 <h1>Snake Game</h1>
-                <h2>Score :{puntuacion}</h2>
+                <h2>Score : <span>{puntuacion}</span></h2>
             </div>
             <div className={style.container}>
                 <Cuadraditos cuerpoSerpiente={body} manzana={manzana} />
